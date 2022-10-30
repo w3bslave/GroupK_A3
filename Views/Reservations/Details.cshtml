@@ -1,0 +1,90 @@
+﻿@model GroupK_A3.Models.Reservation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reservation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RoomType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoomType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPerson)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPerson)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CheckinDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CheckinDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CheckoutDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CheckoutDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecialRequest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpecialRequest)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "CSD 3354 - Web Applications Using C# .NET 02:Group K - Assignment #1 – Employee List";
+}
+
+<div class="jumbotron">
+    <h4>CSD 3354 - Web Applications Using C# .NET 02</h4>
+    <h3>Group K: Assignment #3</h3>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>Hotel Reservation</h3>
+        <div class="container">
+            <p>
+                This is an assignment to test your skills at designing a webform that will require the user to input the
+                correct information and display it on the page.
+            </p>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <h3>Team Members</h3>
+        <div class="container">
+            <div class="row">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Student ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Contribution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            foreach (var member in Model)
+                            {
+                                <tr>
+                                    <th scope="row">@member.MemID</th>
+                                    <td>@member.MemName</td>
+                                    <td>@member.MemRole</td>
+                                    <td>@member.MemContribute</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <h3>Meetings</h3>
+    </div>
+</div>
+<div class="row bg-primary">
+    <div class="col-md-12">
+        <div class="container col-md-4">
+            <h4>Meeting #1: Kick Off Meeting</h4>
+            <ul class="list-group">
+                <li class="list-group-item text-primary">Item Assignment</li>
+                <li class="list-group-item text-primary">Target Delivery Date</li>
+                <li class="list-group-item text-primary">Wireframe & Layout</li>
+            </ul>
+        </div>
+        <div class="container col-md-4">
+            <h4>Meeting #2: Status Update</h4>
+            <ul class="list-group">
+                <li class="list-group-item text-primary">Quick Huddle at the campus</li>
+                <li class="list-group-item text-primary">Discuss each items's progress</li>
+                <li class="list-group-item text-primary">Clarify pending items</li>
+            </ul>
+        </div>
+        <div class="container col-md-4">
+            <h4>Meeting #3: Submission</h4>
+            <ul class="list-group">
+                <li class="list-group-item text-primary">Finalizae Deliverables</li>
+                <li class="list-group-item text-primary">Final Review of the assignment</li>
+                <li class="list-group-item text-primary">Submit archive file in moodle</li>
+            </ul>
+        </div>
+    </div>
+</div>
