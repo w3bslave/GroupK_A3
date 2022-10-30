@@ -19,8 +19,7 @@ namespace GroupK_A3.Models
 
         [Display(Name = "Phone Number")]
         [Required]
-        [MinLength(10,ErrorMessage ="Enter a valid Phone Number")]
-        [MaxLength(10,ErrorMessage ="Enter a valid Phone Number")]
+        [StringLength(10,MinimumLength =10,ErrorMessage ="Please enter a valid Phone Number")]
         public string Phone { get; set; }
 
         [Display(Name = "Home Address")]
@@ -35,7 +34,9 @@ namespace GroupK_A3.Models
         //Booking Details
         [Display(Name = "Room Type")]
         [Required(ErrorMessage ="Please select a Room Type")]
-        public DateTime RoomType { get; set; }
+        public RoomType Roomtype { get; set; }
+
+        public int RoomID { get; set; }
 
         [Display(Name = "Total Person Staying")]
         [Required]

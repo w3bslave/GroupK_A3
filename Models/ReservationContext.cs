@@ -20,5 +20,6 @@ namespace GroupK_A3
         }
 
         public System.Data.Entity.DbSet<GroupK_A3.Models.Reservation> Reservations { get; set; }
+        public System.Data.Entity.DbSet<GroupK_A3.Models.RoomType> RoomTypes  { get; set; }
     }
 }
