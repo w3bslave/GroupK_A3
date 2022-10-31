@@ -1,16 +1,17 @@
-﻿using System;
+﻿using Microsoft.Ajax.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace GroupK_A3.Controllers
+namespace GroupK_A2.Controllers
 {
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
-             List<Member> members = new List<Member>();
+            List<Member> members = new List<Member>();
             //member1
             Member member = new Member
             {
@@ -22,7 +23,6 @@ namespace GroupK_A3.Controllers
             members.Add(member);
 
             //member2
-
             member = new Member
             {
                 MemID = "C0826642",
@@ -31,7 +31,6 @@ namespace GroupK_A3.Controllers
                 MemContribute = "Yes"
             };
             members.Add(member);
-
 
             //member3
             member = new Member
@@ -63,9 +62,8 @@ namespace GroupK_A3.Controllers
                 MemContribute = "Yes"
             };
             members.Add(member);
-            
+
             return View(members);
         }
-
     }
 }

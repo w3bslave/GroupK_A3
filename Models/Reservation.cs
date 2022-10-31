@@ -31,10 +31,19 @@ namespace GroupK_A3.Models
         [EmailAddress]
         public string Email { get; set; }
 
+        private RoomType roomtype;
+
         //Booking Details
-        [Display(Name = "Room Type")]
-        [Required(ErrorMessage ="Please select a Room Type")]
-        public RoomType Roomtype { get; set; }
+        public RoomType GetRoomtype()
+        {
+            return roomtype;
+        }
+
+        //Booking Details
+        public void SetRoomtype(RoomType value)
+        {
+            roomtype = value;
+        }
 
         public int RoomID { get; set; }
 
@@ -51,7 +60,13 @@ namespace GroupK_A3.Models
         public DateTime CheckoutDateTime { get; set; }
 
         [NotMapped]
-        public string CheckinDate => CheckinDateTime.ToString("MM/dd/yyyy");
+        public string CheckinDate
+        {
+            get
+            {
+                return CheckinDateTime.ToString("MM/dd/yyyy");
+            }
+        }
 
         [NotMapped]
         public string CheckinTime => CheckoutDateTime.ToString("hh:mm tt");
