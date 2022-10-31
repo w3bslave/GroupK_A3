@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Globalization;
 using System.Linq;
 using System.Web;
+using System.Web.WebPages;
 using System.Xml.Linq;
 
 namespace GroupK_A3.Models
@@ -60,13 +62,7 @@ namespace GroupK_A3.Models
         public DateTime CheckoutDateTime { get; set; }
 
         [NotMapped]
-        public string CheckinDate
-        {
-            get
-            {
-                return CheckinDateTime.ToString("MM/dd/yyyy");
-            }
-        }
+        public string CheckinDate => CheckinDateTime.ToString("MM/dd/yyyy");
 
         [NotMapped]
         public string CheckinTime => CheckoutDateTime.ToString("hh:mm tt");
