@@ -1,0 +1,105 @@
+﻿@model GroupK_A3.Models.Reservation
+
+@{
+    ViewBag.Title = "Hotel Reservations";
+}
+
+<h2>Hotel Reservations</h2>
+
+@using (Html.BeginForm("Index","Reservation", FormMethod.Post))
+ {
+    <div class="container text-danger">
+        @Html.ValidationSummary(false)
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+                @Html.LabelFor(x => x.Name)
+            </div>
+            <div class="col-lg-4">
+                @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2">
+                @Html.LabelFor(x => x.Phone)
+            </div>
+            <div class="col-lg-4">
+                @Html.EditorFor(x => x.Phone, new { @class = "form-control" , @type = "tel"})
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2">
+                @Html.LabelFor(x => x.HomeAddress)
+            </div>
+            <div class="col-lg-4">
+                @Html.TextAreaFor(x => x.HomeAddress, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2">
+                @Html.LabelFor(x => x.Email)
+            </div>
+            <div class="col-lg-4">
+                @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2">
+                @Html.LabelFor(x => x.RoomType)
+            </div>
+            <div class="col-lg-4">
+                @{ 
+                    IEnumerable<string> roomtype = new List<string> { "Single Bed", "Double Bed", "Deluxe", "Luxury" };
+                }
+                @Html.DropDownList("roomtype", new SelectList(roomtype, roomtype.FirstOrDefault()), "--Select Room Type--" )
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2">
+                @Html.LabelFor(x => x.TotalPerson)
+            </div>
+            <div class="col-lg-4">
+                @Html.TextBoxFor(x => x.TotalPerson, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2">
+                @Html.LabelFor(x => x.CheckinDateTime)
+            </div>
+            <div class="col-lg-4">
+                @Html.TextBoxFor(x => x.CheckinDateTime, new { @class = "form-control" , @type = "date"})
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2">
+                @Html.LabelFor(x => x.CheckoutDateTime)
+            </div>
+            <div class="col-lg-4">
+                @Html.TextBoxFor(x => x.CheckoutDateTime, new { @class = "form-control" , @type = "date"})
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2">
+                @Html.LabelFor(x => x.SpecialRequest)
+            </div>
+            <div class="col-lg-4">
+                @Html.TextBoxFor(x => x.SpecialRequest, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" name="Submit" class="btn btn-default" />
+        </div>
+    </div>
+
+ }
+
+

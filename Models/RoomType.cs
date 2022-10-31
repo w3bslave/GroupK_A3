@@ -7,7 +7,7 @@ namespace GroupK_A3.Models
 {
     public class RoomType
     {
-        public int RoomID { get; set; }
+        public int RoomId { get; set; }
         public string RoomName { get; set; }
 
         public string RoomDesc { get; set; }

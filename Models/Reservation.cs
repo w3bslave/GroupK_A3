@@ -36,18 +36,7 @@ namespace GroupK_A3.Models
         private RoomType roomtype;
 
         //Booking Details
-        public RoomType GetRoomtype()
-        {
-            return roomtype;
-        }
-
-        //Booking Details
-        public void SetRoomtype(RoomType value)
-        {
-            roomtype = value;
-        }
-
-        public int RoomID { get; set; }
+        public string RoomType { get; set; }
 
         [Display(Name = "Total Person Staying")]
         [Required]
